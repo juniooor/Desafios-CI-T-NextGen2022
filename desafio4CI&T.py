@@ -13,15 +13,22 @@ a quantidade de ocorrências de cada termo.
 Obs: Quando houver termos com quantidades iguais, priorizar o retorno de acordo com a ordem de ocorrência do termo 
 na string.
 '''
-
+from collections import Counter
 def calcula_top_ocorrencias_de_queries(texto,queries,k):
-    pass
+    resultado=[]
+    # print(Counter({o:texto.count(o) for o in queries}))
+    c = Counter({o:texto.count(o) for o in queries}).most_common(k)
+    for i in c:
+        resultado.append(i[0])
+    return resultado
+        
 
-
-
+    
+    
 
 
 
 
 if __name__ == '__main__':
     a = calcula_top_ocorrencias_de_queries("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",["a","em","i","el"],2)
+    print(a)

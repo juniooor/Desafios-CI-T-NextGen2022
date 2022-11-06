@@ -7,3 +7,15 @@ um cálculo automatizado, modernizando assim os sistemas deles.
 Considerando um painel de n por m centímetros, desenvolva um código para calcular o número total de LEDs no painel.'''
 
 
+def calcula_total_leds(altura,largura):
+    if altura == 0 or largura == 0:
+        return 0
+    else: 
+        total_leds = (altura + 1) * (largura + 1)
+        return total_leds
+
+
+
+if __name__ == '__main__':
+    a = calcula_total_leds(2,3)
+    print(a)

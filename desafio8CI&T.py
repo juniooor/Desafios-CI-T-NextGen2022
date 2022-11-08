@@ -33,6 +33,7 @@ def escolhe_taxi(tf1,vqr1,tf2,vqr2):
     
     else:
         N = ((tf1 - tf2) / (vqr2 - vqr1))
+        N = round(N, 2)
         valor1 = tf1 + vqr1 * (N-1)
         valor2 = tf2 + vqr2 * (N-1)
         if valor1 < valor2:
